@@ -1,0 +1,10 @@
+# Terraform
+.terraform
+terraform.tfvars
+*.tfstate
+*.tfstate.backup
+tfstate-tmp.json
+
+# OS X
+.history
+.DS_Store

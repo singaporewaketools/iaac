@@ -1,0 +1,12 @@
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+
+# Terragrunt
+.terragrunt-cache
+
+# OS X
+.ssh
+.history
+.DS_Store
