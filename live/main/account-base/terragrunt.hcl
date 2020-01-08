@@ -16,7 +16,7 @@ inputs = {
   stage              = "svc"
   name               = "main"
   public_zones       = {}
-  billing_threshhold = 400 #USD
+  billing_threshhold = 200 #USD
 
   billing_subscriptions = local.common_secret_vars.billing_subscriptions
 }
