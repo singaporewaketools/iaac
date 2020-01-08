@@ -24,6 +24,12 @@ variable "billing_threshhold" {
   description = "Threshhold for estimated charges to trigger billing alerts"
 }
 
+variable "billing_subscriptions" {
+  description = "Protocol to endpoint mapping for notifications (email not supported)"
+  type = map(string)
+  default = {}
+}
+
 variable "aws_region" {
   type = string
 }

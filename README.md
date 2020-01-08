@@ -1,5 +1,14 @@
 # Terraform based infrastructure
 
+NOTE: some private data not commited to this repo:
+
+create `live/main/common_secret_vars.yaml`
+
+```
+billing_subscriptions:
+  sms: "+65<redacted>"
+```
+
 This repository follows the Terragrunt layout to manage state while keeping the TF code DRY.
 
 ```

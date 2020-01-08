@@ -29,6 +29,14 @@ resource "aws_sns_topic" "billing_alerts" {
   )
 }
 
+resource "aws_sns_topic_subscription" "billing_alerts" {
+  for_each = var.billing_subscriptions
+  provider  = aws.billing
+  topic_arn = aws_sns_topic.billing_alerts.arn
+  protocol  = each.key
+  endpoint  = each.value
+}
+
 ## Billing IAM
 # give AWS Budgets permissions to publish to billing_alerts sns topic
 resource "aws_sns_topic_policy" "billing_alerts" {

@@ -6,6 +6,9 @@
 # Terragrunt
 .terragrunt-cache
 
+# private details
+common_secret_vars.yaml
+
 # OS X
 .ssh
 .history
