@@ -6,7 +6,9 @@ create `live/main/common_secret_vars.yaml`
 
 ```
 billing_subscriptions:
-  sms: "+65<redacted>"
+  id: 
+    protocol: "sms"
+    endpoint: "+65<redacted>"
 ```
 
 This repository follows the Terragrunt layout to manage state while keeping the TF code DRY.

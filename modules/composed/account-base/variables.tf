@@ -26,7 +26,10 @@ variable "billing_threshhold" {
 
 variable "billing_subscriptions" {
   description = "Protocol to endpoint mapping for notifications (email not supported)"
-  type = map(string)
+  type = map(object({
+    protocol = string
+    endpoint = string
+  }))
   default = {}
 }
 

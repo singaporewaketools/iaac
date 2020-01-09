@@ -33,8 +33,8 @@ resource "aws_sns_topic_subscription" "billing_alerts" {
   for_each = var.billing_subscriptions
   provider  = aws.billing
   topic_arn = aws_sns_topic.billing_alerts.arn
-  protocol  = each.key
-  endpoint  = each.value
+  protocol  = each.value.protocol
+  endpoint  = each.value.endpoint
 }
 
 ## Billing IAM
